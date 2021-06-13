@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Ilya Maisarah">
+<meta name="keywords" content="HTML, CSS, Javascript">
+<link rel="stylesheet" type="text/css" href="design.css"/>
+<title> FAMILY </title> 
+</head> 
+
+<body>
+
+<div class="header" align="center">
+  <h2>“The most important thing in the world is family and love.” –John Wooden</h2>
+</div>
+
+<div class="topnav">
+  <a href="contact.html">CONTACT</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="interest.html">INTEREST</a>
+  <a href="family.html">FAMILY</a>
+  <a href="education.html">EDUCATION</a>
+  <a href="background.html"> MY BACKGROUND</a>
+  <a href="index.html">HOME</a>
+</div>
+
+<br>
+<br>
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="image/family1.gif" style="width:100%">
+    <div class="text">Family</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="image/family2.png" style="width:100%">
+    <div class="text">Family Photo</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="image/family3.png" style="width:100%">
+    <div class="text">Family Photo</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<br>
+<br>
+
+<table bgcolor="lightyellow" align="center">
+  <tr>
+     <td><a href="image/father.jpg"> <img src="image/father.jpg" alt="My Father Photo"> </a> </td>
+     <td><h2> My Father </h2>
+         <ul align="left">
+           <li type="square">Mohd Fuzi Bin Saad</li>
+           <li type="square">50 years old</li>
+           <li type="square"> TCS Hardware Supervisor worker</li>
+     </td>
+  </tr>
+  
+   <tr>
+     <td><a href="image/mother.jpg"> <img src="image/mother.jpg" alt="My Mother Photo"> </a></td>
+     <td><h2> My Mother </h2>
+         <ul align="left">
+           <li type="square">Suzaina Binti Umar</li>
+           <li type="square">40 years old</li>
+           <li type="square"> Housewife</li>
+     </td>
+  </tr>
+
+  <tr>
+     <td><a href="image/myself.jpg"> <img src="image/myself.jpg" alt="My Photo"></a></td>
+     <td><h2> About Me </h2>
+         <ul align="left">
+           <li type="square"> Ilyamaisarah Binti Mohd Fuzi </li>
+           <li type="square">21 years old</li>
+           <li type="square"> Currently studying Bachelor Degree in Library Management in UiTM Kedah</li>
+     </td>
+  </tr>
+  
+  <tr>
+     <td><a href="image/brother.jpg"> <img src="image/brother.jpg" alt="My Younger Brother Photo"></a></td>
+     <td><h2> My Younger Brother </h2>
+         <ul align="left">
+           <li type="square">Muhammad Faris Haikal </li>
+           <li type="square">14 years old</li>
+           <li type="square"> Student in secondary school at SMK Sanglang, Perlis</li>
+     </td>
+  </tr>
+</table>
+    
+
+<p align="right"><a href="#top"><img src="image/button.png" width="8%" height="15%"><a/></p>
+<br>
+<br>
+<div class="footer">
+  <p>Copyright©IMS456.  All Right Reserved by Ilymsrh; Canva.com; Youtube.com</p>
+</div>
+		   
+</body> 
+</html>
